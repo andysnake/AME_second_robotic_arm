@@ -24,6 +24,10 @@ void moveRobotToPos(const Eigen::Affine3d& pos);
 
 void moveRobotToPos(double x, double y, double z, double rr, double rp, double ry);
 
+void moveRobotToJointValue(double joint1, double joint2, double joint3, double joint4, double joint5, double joint6);
+
+void moveBoxByRobot(const std::vector<double>& pos);
+
 void init();
 
 Eigen::Affine3d getTransform(double x, double y, double z, double roll, double pitch, double yaw);

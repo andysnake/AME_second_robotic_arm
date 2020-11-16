@@ -18,6 +18,8 @@ void moveBoxBySpeed(std::string box_name, double startPos_x, double endPos_x, do
 
 void moveRobotToJointValue(const std::vector<double> &pos);
 
+void moveRobotToJointValue(double joint1, double joint2, double joint3, double joint4, double joint5, double joint6);
+
 void moveRobotToPos(const geometry_msgs::Pose &pos);
 
 void moveRobotToPos(const Eigen::Affine3d& pos);

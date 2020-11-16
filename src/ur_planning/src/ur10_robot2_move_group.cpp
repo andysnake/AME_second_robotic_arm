@@ -17,7 +17,7 @@
 static const std::string PLANNING_GROUP = "manipulator";
 static const std::string ROBOT_DESCRIPTION = "ur10_robot2/robot_description";
 
-static Eigen::Affine3d endEffector_in_box, world_in_base,  tool0_in_endEffector;
+static Eigen::Affine3d endEffector_in_box, world_in_base, tool0_in_endEffector;
 
 moveit::planning_interface::MoveGroupInterfacePtr ur10_robot2_group_ptr;
 moveit::planning_interface::MoveGroupInterface::Plan my_plan;
@@ -30,13 +30,11 @@ double BEFORE_PICK_POS_Z = 0.5;
 double PICK_POS_Z = 0.23;
 bool boxIsArrived = false;
 
-void boxArrivedCallback(const std_msgs::String::ConstPtr& msg)
+void boxArrivedCallback(const std_msgs::String::ConstPtr &msg)
 {
-//   ROS_INFO("I heard: [%s]", msg->data.c_str());
+    //   ROS_INFO("I heard: [%s]", msg->data.c_str());
     boxIsArrived = true;
 }
-
-
 
 void jointStatesCallback(const sensor_msgs::JointState &joint_states_current)
 {
@@ -53,7 +51,7 @@ void jointStatesCallback(const sensor_msgs::JointState &joint_states_current)
     // calculate box picked by the robot while robot is moving
     Eigen::Affine3d box_in_endEffector = getTransform(0, 0, 0.1, 0, 3.1415926, 3.1415926);
     Eigen::Affine3d endEffector_in_tool0 = getTransform(0, 0, 0.05, 0, 0, 0);
-    Eigen::Affine3d base_in_world = getTransform(1.95, 0.4, 0.5, 0, 0, 0);
+    Eigen::Affine3d base_in_world = getTransform(1.8, 0, 0.5, 0, 0, 0);
     Eigen::Affine3d tool0_in_base = kinematic_state->getGlobalLinkTransform("tool0");
 
     Eigen::Affine3d box_in_world = base_in_world * tool0_in_base * endEffector_in_tool0 * box_in_endEffector;
@@ -106,234 +104,72 @@ int main(int argc, char **argv)
         poll_rate.sleep();
     }
 
-    currentBoxName = "ur10_robot2_box1";
+    ros::Subscriber joint_states_sub;
+    Eigen::Affine3d box_in_world;
+    Eigen::Affine3d tool0_in_base;
 
-    moveBox(currentBoxName, BOX_INITIAL_POS_X, BOX_INITIAL_POS_Y, BOX_INITIAL_POS_Z, 1, 0, 0, 0); //initical position of the box
+    //
+    std::string box_name_prefix("ur5_robot1_box");
+    for (int box_num = 1; box_num < 5; box_num++)
+    {
+        currentBoxName = box_name_prefix + std::to_string(box_num);
 
-    //initical position of the robot
-    // std::vector<double> robot_pos = {2.1638830636965913, -1.9281731851461448, 1.8554271998957468, -1.4975848537807899, -1.5702273917826703, 0.59340612948853};
-    // moveRobotToJointValue(robot_pos);
+        //initical position of the robot
+        box_in_world = getTransform(1.0, 0, 0.65, PI, -PI / 2, 0);
+        tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
+        moveRobotToPos(tool0_in_base);
 
-    /////////////////////////////////box moves on the platform//////////////////////////////////////
+        // moveRobotToJointValue(-2.9480689337784334, -1.9732195640463823, -1.2590809193607582, -3.050317978600593, -1.3779115272303324, 1.5706529371378846)
 
+        while (!boxIsArrived)
+        {
+            poll_rate.sleep();
+        }
+        boxIsArrived = false;
+        // pick
+        box_in_world = getTransform(0.8, 0, 0.65, PI, -PI / 2, 0);
+        tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
+        moveRobotToPos(tool0_in_base);
+        // up
+        joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
 
-    ///////////////////////////////////first time/////////////////////////////////////////////////////////////
-   //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
+        box_transfered_pub.publish(msg);
 
-    //move box to the end position of the platform
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
+        std::vector<double> box_in_world;
 
-    RobotTrajectory  robotTrajectory;
-    // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
+        switch (box_num)
+        {
+        case 1:
+            box_in_world = {2.3, -0.175, 0.9, 0, 3.1415926 / 2, 3.1415926};
+            break;
+        case 2:
+            box_in_world = {2.3, 0.175, 0.9, 0, 3.1415926 / 2, 3.1415926};
+            break;
+        case 3:
+            box_in_world = {2.3, -0.175, 1.15, 0, 3.1415926 / 2, 3.1415926};
+            break;
+        case 4:
+            box_in_world = {2.3, 0.175, 1.15, 0, 3.1415926 / 2, 3.1415926};
+            break;
+        default:
+            break;
+        }
 
-    while(!boxIsArrived){
-        poll_rate.sleep();
+        moveBoxByRobot(box_in_world);
+        box_in_world[0] += 0.4;
+        moveBoxByRobot(box_in_world);
+        joint_states_sub.shutdown();
+        box_in_world[0] -= 0.4;
+        moveBoxByRobot(box_in_world);
     }
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    ros::Subscriber joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-
-    box_transfered_pub.publish(msg);
-
-
-    
-    // before place
-    Eigen::Affine3d box_in_world = getTransform(1.2, -0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    Eigen::Affine3d tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, -0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-
-    joint_states_sub.shutdown();
-
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, -0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-
-////////////////////////////////////////////////second time////////////////////////////////////////////////////////////////////////////////
-
-    currentBoxName = "ur10_robot2_box2";
-    //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
-    //move box2
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
-   // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
- 
-   // before place
-    box_in_world = getTransform(1.2, 0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, 0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-
-    joint_states_sub.shutdown();
-
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, 0.175, 0.9, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-
-////////////////////////////////////////////////third time////////////////////////////////////////////////////////////////////////////////
-    currentBoxName = "ur10_robot2_box3";
-    //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
-    //move box2
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
-   // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
- 
-   // before place
-    box_in_world = getTransform(1.2, -0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, -0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, -0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-
-////////////////////////////////////////////////fourth time////////////////////////////////////////////////////////////////////////////////
-    currentBoxName = "ur10_robot2_box4";
-    //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
-    //move box2
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
-   // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
- 
-   // before place
-    box_in_world = getTransform(1.2, 0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, 0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-
-    joint_states_sub.shutdown();
-
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, 0.175, 1.15, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-////////////////////////////////////////////////fifth time////////////////////////////////////////////////////////////////////////////////
-    currentBoxName = "ur10_robot2_box5";
-    //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
-    //move box2
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
-   // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
- 
-   // before place
-    box_in_world = getTransform(1.2, -0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, -0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-
-    joint_states_sub.shutdown();
-
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, -0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-////////////////////////////////////////////////sixth time////////////////////////////////////////////////////////////////////////////////
-    currentBoxName = "ur10_robot2_box6";
-    //initical position of the robot
-    moveRobotToPos(0.1, -0.5, BEFORE_PICK_POS_Z, 0, PI, 0);
-    //move box2
-    moveBoxBySpeed(currentBoxName, BOX_INITIAL_POS_X, BOX_END_POX_X);
-   // before pick
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
-    // pick
-    moveRobotToPos(0.1, -1, PICK_POS_Z, 0, PI, 0);
-    // up
-    joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
-    moveRobotToPos(0.1, -1, BEFORE_PICK_POS_Z, 0, PI, 0);
- 
-   // before place
-    box_in_world = getTransform(1.2, 0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-    // place
-    box_in_world = getTransform(0.9, 0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-
-    joint_states_sub.shutdown();
-
-    // leave 弄远一点
-    box_in_world = getTransform(1.2, 0.175, 1.4, 0, -3.1415926 / 2, 3.1415926);
-    tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-    moveRobotToPos(tool0_in_base);
-    // robot_pos = {0.21425946885709557, -1.4303890087576585, 1.4612216939449594, -0.03146524694353836, 1.7850690314487814, 1.5706091041467118};
-    // moveRobotToJointValue(robot_pos);
-
-    ros::Duration(10000).sleep();
-
     ros::shutdown();
     return 0;
 }
 
-void init(){
+void init()
+{
     endEffector_in_box = getTransform(0, 0, 0.1, 0, 3.1415926, 3.1415926).inverse();
-    world_in_base = getTransform(-1.95, -0.4, -0.5, 0, 0, 0);
+    world_in_base = getTransform(-1.8, 0, -0.5, 0, 0, 0);
     tool0_in_endEffector = getTransform(0, 0, -0.05, 0, 0, 0);
 }
 void moveBox(std::string box_name, double x, double y, double z, double qw, double qx, double qy, double qz)
@@ -341,7 +177,7 @@ void moveBox(std::string box_name, double x, double y, double z, double qw, doub
     gazebo_msgs::ModelState model_state;
     model_state.model_name = box_name;
     model_state.reference_frame = std::string("world");
-    model_state.pose.position.x = x; //start point  , end point 
+    model_state.pose.position.x = x; //start point  , end point
     model_state.pose.position.y = y;
     model_state.pose.position.z = z;
 
@@ -372,6 +208,11 @@ void moveRobotToJointValue(const std::vector<double> &pos)
     ur10_robot2_group_ptr->move();
 }
 
+void moveRobotToJointValue(double joint1, double joint2, double joint3, double joint4, double joint5, double joint6){
+    std::vector<double> pos{joint1, joint2, joint3, joint4, joint5, joint6};
+    moveRobotToJointValue(pos);
+}
+
 void moveRobotToPos(const geometry_msgs::Pose &pos)
 {
     ur10_robot2_group_ptr->setPoseTarget(pos);
@@ -379,7 +220,8 @@ void moveRobotToPos(const geometry_msgs::Pose &pos)
     ur10_robot2_group_ptr->move();
 }
 
-void moveRobotToPos(const Eigen::Affine3d& pos){
+void moveRobotToPos(const Eigen::Affine3d &pos)
+{
     geometry_msgs::Pose pose;
     pose.position.x = pos.translation().x();
     pose.position.y = pos.translation().y();
@@ -393,7 +235,8 @@ void moveRobotToPos(const Eigen::Affine3d& pos){
     moveRobotToPos(pose);
 }
 
-void moveRobotToPos(double x, double y, double z, double rr, double rp, double ry){
+void moveRobotToPos(double x, double y, double z, double rr, double rp, double ry)
+{
     geometry_msgs::Pose pose;
     pose.position.x = x;
     pose.position.y = y;
@@ -421,11 +264,19 @@ Eigen::Affine3d getTransform(double x, double y, double z, double roll, double p
     return trans;
 }
 
-void RobotTrajectory::move(){
+void RobotTrajectory::move()
+{
     moveit_msgs::RobotTrajectory trajectory;
     const double jump_threshold = 0.0;
     const double eef_step = 0.01;
     double fraction = ur10_robot2_group_ptr->computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory);
     ur10_robot2_group_ptr->execute(trajectory);
     waypoints.clear();
+}
+
+void moveBoxByRobot(const std::vector<double> &pos)
+{
+    Eigen::Affine3d box_in_world = getTransform(pos[0], pos[1], pos[2], pos[3], pos[4], pos[5]);
+    Eigen::Affine3d tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
+    moveRobotToPos(tool0_in_base);
 }
