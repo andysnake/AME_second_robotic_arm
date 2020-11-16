@@ -110,16 +110,38 @@ int main(int argc, char **argv)
 
     //
     std::string box_name_prefix("ur5_robot1_box");
+
+
+    /**test**********************************/
+     currentBoxName = "ur5_robot1_box1";
+
+    // //before pick
+    // moveRobotToJointValue(0.2980975075947061, -2.282429625421406, -2.194473723686823, 1.3350733884099304, 1.2734313197322464, -1.5698656998835263);
+
+    // //pick
+    // box_in_world = getTransform(0.8, 0, 0.65, PI, -PI / 2, 0);
+    // tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
+    // moveRobotToPos(tool0_in_base);
+
+    // joint_states_sub = nh.subscribe("/ur10_robot2/joint_states", 1000, jointStatesCallback);
+
+    // std::vector<double> box_i_world = {2.3, 0.175, 1.15, 0, 3.1415926 / 2, 3.1415926};
+    //  moveBoxByRobot(box_i_world);
+
+    // moveRobotToJointValue(0.04229261372418325, 0.6498033305152884, -2.61953186572908,   -1.1714516300231725, -1.613094012263364, 1.5699438325817896);
+
+    /****test end********/
+    
     for (int box_num = 1; box_num < 5; box_num++)
     {
         currentBoxName = box_name_prefix + std::to_string(box_num);
 
         //initical position of the robot
-        box_in_world = getTransform(1.0, 0, 0.65, PI, -PI / 2, 0);
-        tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
-        moveRobotToPos(tool0_in_base);
+        // box_in_world = getTransform(1.0, 0, 0.65, PI, -PI / 2, 0);
+        // tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
+        // moveRobotToPos(tool0_in_base);
 
-        // moveRobotToJointValue(-2.9480689337784334, -1.9732195640463823, -1.2590809193607582, -3.050317978600593, -1.3779115272303324, 1.5706529371378846)
+        moveRobotToJointValue( 0.2980975075947061, -2.282429625421406, -2.194473723686823, 1.3350733884099304, 1.2734313197322464, -1.5698656998835263);
 
         while (!boxIsArrived)
         {
@@ -136,26 +158,31 @@ int main(int argc, char **argv)
         box_transfered_pub.publish(msg);
 
         std::vector<double> box_in_world;
+        std::vector<double> pos_recorded;
 
         switch (box_num)
         {
         case 1:
             box_in_world = {2.3, -0.175, 0.9, 0, 3.1415926 / 2, 3.1415926};
+            pos_recorded = {-1.1502369920030215, 0.649738662936385, -2.619892590089224,  -1.1697606210772378, -0.4214879530672384, 1.5693546347545073};
             break;
         case 2:
             box_in_world = {2.3, 0.175, 0.9, 0, 3.1415926 / 2, 3.1415926};
+            pos_recorded = {0.04229261372418325, 0.6498033305152884, -2.61953186572908,   -1.1714516300231725, -1.613094012263364, 1.5699438325817896};
             break;
         case 3:
             box_in_world = {2.3, -0.175, 1.15, 0, 3.1415926 / 2, 3.1415926};
+            pos_recorded = {-1.150296251873522, 0.08147579063831412, -2.298745065049742, -0.9254635763356909, -0.4199843552107412, 1.5718664681381433};
             break;
         case 4:
             box_in_world = {2.3, 0.175, 1.15, 0, 3.1415926 / 2, 3.1415926};
+            pos_recorded = {-1.9909089969467022, -1.07263546094957, -2.299193458639359, 0.22803407921439067, 0.4191972024687525, 1.5734678241705957};
             break;
         default:
             break;
         }
-
-        moveBoxByRobot(box_in_world);
+        moveRobotToJointValue(pos_recorded);
+        // moveBoxByRobot(box_in_world);
         box_in_world[0] += 0.4;
         moveBoxByRobot(box_in_world);
         joint_states_sub.shutdown();

@@ -113,6 +113,13 @@ int main(int argc, char **argv)
     for (int box_num = 1; box_num < 6; box_num++)
     {
         currentBoxName = box_name_prefix + std::to_string(box_num);
+        moveBox(currentBoxName, BOX_INITIAL_POS_X, BOX_INITIAL_POS_Y, BOX_INITIAL_POS_Z, 1, 0, 0, 0); //initical position of the box
+    }
+
+
+    for (int box_num = 1; box_num < 5; box_num++)
+    {
+        currentBoxName = box_name_prefix + std::to_string(box_num);
 
         moveBox(currentBoxName, BOX_INITIAL_POS_X, BOX_INITIAL_POS_Y, BOX_INITIAL_POS_Z, 1, 0, 0, 0); //initical position of the box
 
@@ -151,6 +158,8 @@ int main(int argc, char **argv)
         tool0_in_base = world_in_base * box_in_world * endEffector_in_box * tool0_in_endEffector;
         moveRobotToPos(tool0_in_base);
     }
+
+    ros::Duration(1000).sleep();
 
     ros::shutdown();
     return 0;
