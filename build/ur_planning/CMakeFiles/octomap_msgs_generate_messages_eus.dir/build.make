@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547/src
+CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
+CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
 
 # Utility rule file for octomap_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build: octomap_msg
 .PHONY : ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
 
 ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/clean:
-	cd /home/ying/Desktop/new_project547/build/ur_planning && $(CMAKE_COMMAND) -P CMakeFiles/octomap_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/ying/Desktop/new_project547_cong2/build/ur_planning && $(CMAKE_COMMAND) -P CMakeFiles/octomap_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/clean
 
 ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/depend:
-	cd /home/ying/Desktop/new_project547/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547/src /home/ying/Desktop/new_project547/src/ur_planning /home/ying/Desktop/new_project547/build /home/ying/Desktop/new_project547/build/ur_planning /home/ying/Desktop/new_project547/build/ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/ur_planning /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/ur_planning /home/ying/Desktop/new_project547_cong2/build/ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547/src
+CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
+CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
 
 # Utility rule file for clean_test_results_ur_gazebo.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
 include universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/progress.make
 
 universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo:
-	cd /home/ying/Desktop/new_project547/build/universal_robot/ur_gazebo && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/ying/Desktop/new_project547/build/test_results/ur_gazebo
+	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_gazebo && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/ying/Desktop/new_project547_cong2/build/test_results/ur_gazebo
 
 clean_test_results_ur_gazebo: universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo
 clean_test_results_ur_gazebo: universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/build.make
@@ -67,10 +67,10 @@ universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/build: cle
 .PHONY : universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/build
 
 universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/clean:
-	cd /home/ying/Desktop/new_project547/build/universal_robot/ur_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur_gazebo.dir/cmake_clean.cmake
+	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ur_gazebo.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/clean
 
 universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/depend:
-	cd /home/ying/Desktop/new_project547/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547/src /home/ying/Desktop/new_project547/src/universal_robot/ur_gazebo /home/ying/Desktop/new_project547/build /home/ying/Desktop/new_project547/build/universal_robot/ur_gazebo /home/ying/Desktop/new_project547/build/universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_gazebo /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_gazebo /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_gazebo/CMakeFiles/clean_test_results_ur_gazebo.dir/depend
 

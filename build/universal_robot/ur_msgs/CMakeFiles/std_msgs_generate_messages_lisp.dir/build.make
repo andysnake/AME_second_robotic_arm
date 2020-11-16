@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547/src
+CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
+CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build: st
 .PHONY : universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/ying/Desktop/new_project547/build/universal_robot/ur_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_msgs && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/ying/Desktop/new_project547/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547/src /home/ying/Desktop/new_project547/src/universal_robot/ur_msgs /home/ying/Desktop/new_project547/build /home/ying/Desktop/new_project547/build/universal_robot/ur_msgs /home/ying/Desktop/new_project547/build/universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_msgs /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_msgs /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ying/Desktop/new_project547/src/process_visualizer
+# Install script for directory: /home/ying/Desktop/new_project547_cong2/src/process_visualizer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547/build/process_visualizer/catkin_generated/installspace/process_visualizer.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/build/process_visualizer/catkin_generated/installspace/process_visualizer.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/process_visualizer/cmake" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547/build/process_visualizer/catkin_generated/installspace/process_visualizerConfig.cmake"
-    "/home/ying/Desktop/new_project547/build/process_visualizer/catkin_generated/installspace/process_visualizerConfig-version.cmake"
+    "/home/ying/Desktop/new_project547_cong2/build/process_visualizer/catkin_generated/installspace/process_visualizerConfig.cmake"
+    "/home/ying/Desktop/new_project547_cong2/build/process_visualizer/catkin_generated/installspace/process_visualizerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/process_visualizer" TYPE FILE FILES "/home/ying/Desktop/new_project547/src/process_visualizer/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/process_visualizer" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/src/process_visualizer/package.xml")
 endif()
 

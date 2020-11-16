@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547/install
+prefix=/home/ying/Desktop/new_project547_cong2/install
 
 Name: moveit_config_ur5
 Description: Description of moveit_config_ur5

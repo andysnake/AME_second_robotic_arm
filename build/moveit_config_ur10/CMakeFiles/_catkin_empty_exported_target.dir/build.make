@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547/src
+CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
+CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_e
 .PHONY : moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/ying/Desktop/new_project547/build/moveit_config_ur10 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/ying/Desktop/new_project547_cong2/build/moveit_config_ur10 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/ying/Desktop/new_project547/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547/src /home/ying/Desktop/new_project547/src/moveit_config_ur10 /home/ying/Desktop/new_project547/build /home/ying/Desktop/new_project547/build/moveit_config_ur10 /home/ying/Desktop/new_project547/build/moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/moveit_config_ur10 /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/moveit_config_ur10 /home/ying/Desktop/new_project547_cong2/build/moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : moveit_config_ur10/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

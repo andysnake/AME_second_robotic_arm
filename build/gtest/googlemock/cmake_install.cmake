@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ying/Desktop/new_project547/build/gtest/googlemock/gtest/cmake_install.cmake")
+  include("/home/ying/Desktop/new_project547_cong2/build/gtest/googlemock/gtest/cmake_install.cmake")
 
 endif()
 

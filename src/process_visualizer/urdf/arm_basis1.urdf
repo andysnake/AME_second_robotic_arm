@@ -3,7 +3,7 @@
   <link name="arm_basis">
     <visual>
       	<geometry>
-          	<mesh filename="package://process_visualizer/resources/arm_basis.STL"/>
+          	<mesh filename="package://process_visualizer/resources/arm_basis1.STL"/>
       	</geometry>
 	  	<material name="ABS" >
           	<color rgba="0.9 0.7 0.5 1.0" />

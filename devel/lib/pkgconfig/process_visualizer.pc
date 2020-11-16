@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547/devel
+prefix=/home/ying/Desktop/new_project547_cong2/devel
 
 Name: process_visualizer
 Description: Description of process_visualizer

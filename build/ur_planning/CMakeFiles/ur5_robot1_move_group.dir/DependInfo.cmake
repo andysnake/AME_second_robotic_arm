@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ying/Desktop/new_project547/src/ur_planning/src/ur5_robot1_move_group.cpp" "/home/ying/Desktop/new_project547/build/ur_planning/CMakeFiles/ur5_robot1_move_group.dir/src/ur5_robot1_move_group.cpp.o"
+  "/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/ur5_robot1_move_group.cpp" "/home/ying/Desktop/new_project547_cong2/build/ur_planning/CMakeFiles/ur5_robot1_move_group.dir/src/ur5_robot1_move_group.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ying/Desktop/new_project547/src/ur_planning/include"
+  "/home/ying/Desktop/new_project547_cong2/src/ur_planning/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"

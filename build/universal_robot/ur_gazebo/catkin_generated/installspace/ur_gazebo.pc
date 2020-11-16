@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547/install
+prefix=/home/ying/Desktop/new_project547_cong2/install
 
 Name: ur_gazebo
 Description: Description of ur_gazebo

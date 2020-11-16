@@ -1,8 +1,8 @@
-# Install script for directory: /home/ying/Desktop/new_project547/src/ur_planning
+# Install script for directory: /home/ying/Desktop/new_project547_cong2/src/ur_planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547/build/ur_planning/catkin_generated/installspace/ur_planning.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/build/ur_planning/catkin_generated/installspace/ur_planning.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_planning/cmake" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547/build/ur_planning/catkin_generated/installspace/ur_planningConfig.cmake"
-    "/home/ying/Desktop/new_project547/build/ur_planning/catkin_generated/installspace/ur_planningConfig-version.cmake"
+    "/home/ying/Desktop/new_project547_cong2/build/ur_planning/catkin_generated/installspace/ur_planningConfig.cmake"
+    "/home/ying/Desktop/new_project547_cong2/build/ur_planning/catkin_generated/installspace/ur_planningConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_planning" TYPE FILE FILES "/home/ying/Desktop/new_project547/src/ur_planning/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_planning" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/src/ur_planning/package.xml")
 endif()
 

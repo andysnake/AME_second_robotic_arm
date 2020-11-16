@@ -11,43 +11,10 @@
 #include <moveit_visual_tools/moveit_visual_tools.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
-// class Move_Group_Robot_2
-// {
-// private:
-//     /* data */
-// public:
-
-//     // Initializing ROS Parameters
-
-//     std::string PLANNING_GROUP = "manipulator";
-//     std::string ROBOT_DESCRIPTION = "ur10_robot2/robot_description";
-
-//     // moveit::planning_interface::MoveGroupInterface::Options Opt{PLANNING_GROUP, ROBOT_DESCRIPTION, node_handle_rob2};
-
-//     // static moveit::planning_interface::MoveGroupInterfacePtr ur10_robot2_group_ptr;
-
-//     // Initializing MoveGroup Parameters
-//     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
-//     // static const robot_state::JointModelGroup* joint_model_group;
-//     moveit::planning_interface::MoveGroupInterface::Plan ur10_robot2_cartesian_plan;
-//     moveit::planning_interface::MoveGroupInterface::Plan ur10_robot2_goal_plan;
-
-//     moveit_msgs::OrientationConstraint goal_pose_constraint;
-
-//     std::vector<std::string> joint_names;
-//     std::vector<std::string> link_names;
-
-//     //Functions to perform operations
-//     Move_Group_Robot_2(ros::NodeHandle& node_handle_rob2);
-
-//     void move_to_configuration(std::vector<double>&target_joint_angles);
-
-//     void move_to_pose(const geometry_msgs::Pose& pose);
-// };
 
 void moveBox(std::string box_name, double x, double y, double z, double qw, double qx, double qy, double qz);
 
-void moveBoxBySpeed(std::string box_name, double startPos_x, double endPos_x, double speed = 0.4);
+void moveBoxBySpeed(std::string box_name, double startPos_x, double endPos_x, double speed = -0.4);
 
 void moveRobotToJointValue(const std::vector<double> &pos);
 

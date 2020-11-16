@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547/src
+CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547/build
+CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
 
 # Utility rule file for dynamic_reconfigure_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build: dyn
 .PHONY : ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 
 ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean:
-	cd /home/ying/Desktop/new_project547/build/ur_planning && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ying/Desktop/new_project547_cong2/build/ur_planning && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 
 ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend:
-	cd /home/ying/Desktop/new_project547/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547/src /home/ying/Desktop/new_project547/src/ur_planning /home/ying/Desktop/new_project547/build /home/ying/Desktop/new_project547/build/ur_planning /home/ying/Desktop/new_project547/build/ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/ur_planning /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/ur_planning /home/ying/Desktop/new_project547_cong2/build/ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur_planning/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend
 

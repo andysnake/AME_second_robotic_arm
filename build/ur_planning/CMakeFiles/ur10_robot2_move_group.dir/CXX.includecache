@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ying/Desktop/new_project547/src/ur_planning/include/ur_planning/ur10_robot2_move_group.hpp
+/home/ying/Desktop/new_project547_cong2/src/ur_planning/include/ur_planning/ur10_robot2_move_group.hpp
 tf/tf.h
 -
 moveit/move_group_interface/move_group_interface.h
@@ -26,15 +26,17 @@ moveit_visual_tools/moveit_visual_tools.h
 tf2_geometry_msgs/tf2_geometry_msgs.h
 -
 
-/home/ying/Desktop/new_project547/src/ur_planning/src/ur10_robot2_move_group.cpp
+/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/ur10_robot2_move_group.cpp
 ur_planning/ur10_robot2_move_group.hpp
-/home/ying/Desktop/new_project547/src/ur_planning/src/ur_planning/ur10_robot2_move_group.hpp
+/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/ur_planning/ur10_robot2_move_group.hpp
 gazebo_msgs/SetModelState.h
 -
 moveit/planning_scene_interface/planning_scene_interface.h
 -
 moveit/move_group_interface/move_group_interface.h
 -
+std_msgs/String.h
+/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/std_msgs/String.h
 
 /opt/ros/melodic/include/actionlib/action_definition.h
 
@@ -3611,6 +3613,22 @@ ros/message_operations.h
 -
 
 /opt/ros/melodic/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/melodic/include/std_msgs/String.h
 string
 -
 vector

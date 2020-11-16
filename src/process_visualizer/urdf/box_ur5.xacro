@@ -35,6 +35,6 @@
     </gazebo>
 
     <gazebo reference="object_link">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Turquoise</material>
     </gazebo>
 </robot>
