@@ -1,0 +1,8 @@
+prefix=/home/ying/Desktop/new_project547/devel
+
+Name: moveit_config_ur10
+Description: Description of moveit_config_ur10
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

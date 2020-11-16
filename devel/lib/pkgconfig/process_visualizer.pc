@@ -1,0 +1,8 @@
+prefix=/home/ying/Desktop/new_project547/devel
+
+Name: process_visualizer
+Description: Description of process_visualizer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

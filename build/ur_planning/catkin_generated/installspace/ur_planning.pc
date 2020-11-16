@@ -1,0 +1,8 @@
+prefix=/home/ying/Desktop/new_project547/install
+
+Name: ur_planning
+Description: Description of ur_planning
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
