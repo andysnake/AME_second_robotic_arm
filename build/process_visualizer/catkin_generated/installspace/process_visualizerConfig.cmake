@@ -67,14 +67,14 @@ set(process_visualizer_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(process_visualizer_SOURCE_PREFIX /home/ying/Desktop/new_project547_cong2/src/process_visualizer)
-  set(process_visualizer_DEVEL_PREFIX /home/ying/Desktop/new_project547_cong2/devel)
+  set(process_visualizer_SOURCE_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/src/process_visualizer)
+  set(process_visualizer_DEVEL_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/devel)
   set(process_visualizer_INSTALL_PREFIX "")
   set(process_visualizer_PREFIX ${process_visualizer_DEVEL_PREFIX})
 else()
   set(process_visualizer_SOURCE_PREFIX "")
   set(process_visualizer_DEVEL_PREFIX "")
-  set(process_visualizer_INSTALL_PREFIX /home/ying/Desktop/new_project547_cong2/install)
+  set(process_visualizer_INSTALL_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/install)
   set(process_visualizer_PREFIX ${process_visualizer_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ying/Desktop/new_project547_cong2/install/lib;/home/ying/ws_moveit/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/andybro/Flexibility_code/AME547_Group3_config2/install/lib;/home/andybro/Final_project_code/AME547_Group3_config1/devel/lib;/home/andybro/robotic_arm_cooperation/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

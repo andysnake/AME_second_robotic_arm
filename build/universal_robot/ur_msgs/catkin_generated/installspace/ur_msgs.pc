@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547_cong2/install
+prefix=/home/andybro/Flexibility_code/AME547_Group3_config2/install
 
 Name: ur_msgs
 Description: Description of ur_msgs

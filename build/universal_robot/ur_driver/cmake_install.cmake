@@ -1,8 +1,8 @@
-# Install script for directory: /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver
+# Install script for directory: /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andybro/Flexibility_code/AME547_Group3_config2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,51 +38,51 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_driver/catkin_generated/safe_execute_install.cmake")
+  include("/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_driver/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ur_driver" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/devel/include/ur_driver/URDriverConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ur_driver" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/devel/include/ur_driver/URDriverConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/ying/Desktop/new_project547_cong2/devel/lib/python2.7/dist-packages/ur_driver/cfg")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/python2.7/dist-packages/ur_driver/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ur_driver" TYPE DIRECTORY FILES "/home/ying/Desktop/new_project547_cong2/devel/lib/python2.7/dist-packages/ur_driver/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/ur_driver" TYPE DIRECTORY FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/python2.7/dist-packages/ur_driver/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver/cmake" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig.cmake"
-    "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig-version.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES
-    "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/test_move.py"
-    "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/test_io.py"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/test_move.py"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/test_io.py"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/src/ur_driver/driver.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/src/ur_driver/driver.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/prog"
-    "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_driver/prog_reset"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/prog"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_driver/prog_reset"
     )
 endif()
 

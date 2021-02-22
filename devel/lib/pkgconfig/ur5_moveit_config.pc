@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547_cong2/devel
+prefix=/home/andybro/Flexibility_code/AME547_Group3_config2/devel
 
 Name: ur5_moveit_config
 Description: Description of ur5_moveit_config

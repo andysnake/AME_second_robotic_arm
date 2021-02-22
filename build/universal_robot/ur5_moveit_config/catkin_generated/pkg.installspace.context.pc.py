@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ur5_moveit_config"
-PROJECT_SPACE_DIR = "/home/ying/Desktop/new_project547_cong2/install"
+PROJECT_SPACE_DIR = "/home/andybro/Flexibility_code/AME547_Group3_config2/install"
 PROJECT_VERSION = "1.2.7"

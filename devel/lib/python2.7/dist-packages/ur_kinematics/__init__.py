@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics/src'.split(';')
+__extended_path = '/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

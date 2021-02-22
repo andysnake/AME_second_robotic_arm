@@ -1,4 +1,4 @@
-prefix=/home/ying/Desktop/new_project547_cong2/install
+prefix=/home/andybro/Flexibility_code/AME547_Group3_config2/install
 
 Name: moveit_config_ur10
 Description: Description of moveit_config_ur10

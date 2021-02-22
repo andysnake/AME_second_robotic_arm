@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ying/Desktop/new_project547_cong2/src/ur_planning/include/ur_planning/ur5_robot1_move_group.hpp
+/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/include/ur_planning/ur5_robot1_move_group.hpp
 tf/tf.h
 -
 moveit/move_group_interface/move_group_interface.h
@@ -26,13 +26,13 @@ moveit_visual_tools/moveit_visual_tools.h
 tf2_geometry_msgs/tf2_geometry_msgs.h
 -
 
-/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/ur5_robot1_move_group.cpp
+/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/src/ur5_robot1_move_group.cpp
 ur_planning/ur5_robot1_move_group.hpp
-/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/ur_planning/ur5_robot1_move_group.hpp
+/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/src/ur_planning/ur5_robot1_move_group.hpp
 gazebo_msgs/SetModelState.h
 -
 std_msgs/String.h
-/home/ying/Desktop/new_project547_cong2/src/ur_planning/src/std_msgs/String.h
+/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/src/std_msgs/String.h
 moveit/planning_scene_interface/planning_scene_interface.h
 -
 moveit/move_group_interface/move_group_interface.h

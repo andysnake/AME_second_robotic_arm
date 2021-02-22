@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
+CMAKE_SOURCE_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
+CMAKE_BINARY_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/build
 
 # Include any dependencies generated for this target.
 include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend.make
@@ -58,17 +58,17 @@ include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/progress.make
 include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/flags.make
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/flags.make
-universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics/src/ur_kin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ying/Desktop/new_project547_cong2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o"
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o -c /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics/src/ur_kin.cpp
+universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics/src/ur_kin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o"
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o -c /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics/src/ur_kin.cpp
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i"
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s"
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o.requires:
 
@@ -88,14 +88,14 @@ ur5_kin_OBJECTS = \
 # External object files for target ur5_kin
 ur5_kin_EXTERNAL_OBJECTS =
 
-/home/ying/Desktop/new_project547_cong2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
-/home/ying/Desktop/new_project547_cong2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make
-/home/ying/Desktop/new_project547_cong2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ying/Desktop/new_project547_cong2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ying/Desktop/new_project547_cong2/devel/lib/libur5_kin.so"
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur5_kin.dir/link.txt --verbose=$(VERBOSE)
+/home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
+/home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make
+/home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/libur5_kin.so"
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur5_kin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build: /home/ying/Desktop/new_project547_cong2/devel/lib/libur5_kin.so
+universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build: /home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib/libur5_kin.so
 
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build
 
@@ -104,10 +104,10 @@ universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/requires: universal_robot/u
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/requires
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/clean:
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur5_kin.dir/cmake_clean.cmake
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur5_kin.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/clean
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend:
-	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_kinematics /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andybro/Flexibility_code/AME547_Group3_config2/src /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_kinematics /home/andybro/Flexibility_code/AME547_Group3_config2/build /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend
 

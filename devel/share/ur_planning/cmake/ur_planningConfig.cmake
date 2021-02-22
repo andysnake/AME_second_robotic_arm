@@ -67,14 +67,14 @@ set(ur_planning_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ur_planning_SOURCE_PREFIX /home/ying/Desktop/new_project547_cong2/src/ur_planning)
-  set(ur_planning_DEVEL_PREFIX /home/ying/Desktop/new_project547_cong2/devel)
+  set(ur_planning_SOURCE_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning)
+  set(ur_planning_DEVEL_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/devel)
   set(ur_planning_INSTALL_PREFIX "")
   set(ur_planning_PREFIX ${ur_planning_DEVEL_PREFIX})
 else()
   set(ur_planning_SOURCE_PREFIX "")
   set(ur_planning_DEVEL_PREFIX "")
-  set(ur_planning_INSTALL_PREFIX /home/ying/Desktop/new_project547_cong2/install)
+  set(ur_planning_INSTALL_PREFIX /home/andybro/Flexibility_code/AME547_Group3_config2/install)
   set(ur_planning_PREFIX ${ur_planning_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ur_planning_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ying/Desktop/new_project547_cong2/src/ur_planning/include " STREQUAL " ")
+if(NOT "/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/include " STREQUAL " ")
   set(ur_planning_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ying/Desktop/new_project547_cong2/src/ur_planning/include")
+  set(_include_dirs "/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/ying/Desktop/new_project547_cong2/src/ur_planning/include " STREQU
         message(FATAL_ERROR "Project 'ur_planning' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ur_planning' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ying/Desktop/new_project547_cong2/src/ur_planning/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ur_planning' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/andybro/Flexibility_code/AME547_Group3_config2/src/ur_planning/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ur_planning_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ying/Desktop/new_project547_cong2/devel/lib;/home/ying/ws_moveit/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/andybro/Flexibility_code/AME547_Group3_config2/devel/lib;/home/andybro/Final_project_code/AME547_Group3_config1/devel/lib;/home/andybro/robotic_arm_cooperation/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur5_moveit_config
+# Install script for directory: /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur5_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andybro/Flexibility_code/AME547_Group3_config2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_config.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_config.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config/cmake" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_configConfig.cmake"
-    "/home/ying/Desktop/new_project547_cong2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_configConfig-version.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_configConfig.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur5_moveit_config/catkin_generated/installspace/ur5_moveit_configConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur5_moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur5_moveit_config/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE DIRECTORY FILES "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur5_moveit_config/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE DIRECTORY FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur5_moveit_config/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE DIRECTORY FILES "/home/ying/Desktop/new_project547_cong2/src/universal_robot/ur5_moveit_config/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5_moveit_config" TYPE DIRECTORY FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur5_moveit_config/config")
 endif()
 

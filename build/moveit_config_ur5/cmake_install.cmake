@@ -1,8 +1,8 @@
-# Install script for directory: /home/ying/Desktop/new_project547_cong2/src/moveit_config_ur5
+# Install script for directory: /home/andybro/Flexibility_code/AME547_Group3_config2/src/moveit_config_ur5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ying/Desktop/new_project547_cong2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/andybro/Flexibility_code/AME547_Group3_config2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5/cmake" TYPE FILE FILES
-    "/home/ying/Desktop/new_project547_cong2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5Config.cmake"
-    "/home/ying/Desktop/new_project547_cong2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5Config-version.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5Config.cmake"
+    "/home/andybro/Flexibility_code/AME547_Group3_config2/build/moveit_config_ur5/catkin_generated/installspace/moveit_config_ur5Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE FILE FILES "/home/ying/Desktop/new_project547_cong2/src/moveit_config_ur5/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE FILE FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/moveit_config_ur5/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE DIRECTORY FILES "/home/ying/Desktop/new_project547_cong2/src/moveit_config_ur5/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE DIRECTORY FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/moveit_config_ur5/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE DIRECTORY FILES "/home/ying/Desktop/new_project547_cong2/src/moveit_config_ur5/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config_ur5" TYPE DIRECTORY FILES "/home/andybro/Flexibility_code/AME547_Group3_config2/src/moveit_config_ur5/config")
 endif()
 

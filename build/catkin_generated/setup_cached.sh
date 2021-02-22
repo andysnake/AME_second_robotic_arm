@@ -7,10 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH='/home/ying/Desktop/new_project547_cong2/devel:/home/ying/ws_moveit/devel:/opt/ros/melodic'
-export LD_LIBRARY_PATH='/home/ying/ws_moveit/devel/lib:/opt/ros/melodic/lib'
-export PKG_CONFIG_PATH='/home/ying/ws_moveit/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'
-export PWD='/home/ying/Desktop/new_project547_cong2/build'
-export PYTHONPATH='/opt/ros/melodic/lib/python2.7/dist-packages'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/ying/Desktop/new_project547_cong2/devel/share/common-lisp:/home/ying/ws_moveit/devel/share/common-lisp'
-export ROS_PACKAGE_PATH='/home/ying/Desktop/new_project547_cong2/src:/home/ying/ws_moveit/src/moveit_tutorials:/home/ying/ws_moveit/src/panda_moveit_config:/opt/ros/melodic/share'
+export CMAKE_PREFIX_PATH="/home/andybro/Flexibility_code/AME547_Group3_config2/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/andybro/Flexibility_code/AME547_Group3_config2/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/andybro/Flexibility_code/AME547_Group3_config2/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/andybro/Flexibility_code/AME547_Group3_config2/src:$ROS_PACKAGE_PATH"

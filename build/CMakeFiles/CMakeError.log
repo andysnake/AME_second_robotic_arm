@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4a29f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4a29f.dir/build.make CMakeFiles/cmTC_4a29f.dir/build
-make[1]: Entering directory '/home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4a29f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_4a29f.dir/CheckSymbolExists.c.o   -c /home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_4a29f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a29f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4a29f.dir/CheckSymbolExists.c.o  -o cmTC_4a29f 
-CMakeFiles/cmTC_4a29f.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_2956a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2956a.dir/build.make CMakeFiles/cmTC_2956a.dir/build
+make[1]: Entering directory '/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2956a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2956a.dir/CheckSymbolExists.c.o   -c /home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2956a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2956a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2956a.dir/CheckSymbolExists.c.o  -o cmTC_2956a 
+CMakeFiles/cmTC_2956a.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4a29f.dir/build.make:97: recipe for target 'cmTC_4a29f' failed
-make[1]: *** [cmTC_4a29f] Error 1
-make[1]: Leaving directory '/home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_4a29f/fast' failed
-make: *** [cmTC_4a29f/fast] Error 2
+CMakeFiles/cmTC_2956a.dir/build.make:97: recipe for target 'cmTC_2956a' failed
+make[1]: *** [cmTC_2956a] Error 1
+make[1]: Leaving directory '/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2956a/fast' failed
+make: *** [cmTC_2956a/fast] Error 2
 
-File /home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_42cb7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_42cb7.dir/build.make CMakeFiles/cmTC_42cb7.dir/build
-make[1]: Entering directory '/home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_42cb7.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_42cb7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_42cb7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42cb7.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_42cb7.dir/CheckFunctionExists.c.o  -o cmTC_42cb7 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_347f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_347f0.dir/build.make CMakeFiles/cmTC_347f0.dir/build
+make[1]: Entering directory '/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_347f0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_347f0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_347f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_347f0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_347f0.dir/CheckFunctionExists.c.o  -o cmTC_347f0 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_42cb7.dir/build.make:97: recipe for target 'cmTC_42cb7' failed
-make[1]: *** [cmTC_42cb7] Error 1
-make[1]: Leaving directory '/home/ying/Desktop/new_project547_cong2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_42cb7/fast' failed
-make: *** [cmTC_42cb7/fast] Error 2
+CMakeFiles/cmTC_347f0.dir/build.make:97: recipe for target 'cmTC_347f0' failed
+make[1]: *** [cmTC_347f0] Error 1
+make[1]: Leaving directory '/home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_347f0/fast' failed
+make: *** [cmTC_347f0/fast] Error 2
 
 

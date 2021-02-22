@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
+CMAKE_SOURCE_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
+CMAKE_BINARY_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/build
 
 # Utility rule file for run_tests_ur_bringup.
 
@@ -63,10 +63,10 @@ universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/build: run_tests_
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/build
 
 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/clean:
-	cd /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_ur_bringup.dir/cmake_clean.cmake
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_ur_bringup.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/clean
 
 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/depend:
-	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src/universal_robot/ur_bringup /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_bringup /home/ying/Desktop/new_project547_cong2/build/universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andybro/Flexibility_code/AME547_Group3_config2/src /home/andybro/Flexibility_code/AME547_Group3_config2/src/universal_robot/ur_bringup /home/andybro/Flexibility_code/AME547_Group3_config2/build /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_bringup /home/andybro/Flexibility_code/AME547_Group3_config2/build/universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup.dir/depend
 

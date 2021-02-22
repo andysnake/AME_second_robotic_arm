@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ying/Desktop/new_project547_cong2/src
+CMAKE_SOURCE_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ying/Desktop/new_project547_cong2/build
+CMAKE_BINARY_DIR = /home/andybro/Flexibility_code/AME547_Group3_config2/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/ying/Desktop/new_project547_cong2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/src /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build /home/ying/Desktop/new_project547_cong2/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andybro/Flexibility_code/AME547_Group3_config2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andybro/Flexibility_code/AME547_Group3_config2/src /home/andybro/Flexibility_code/AME547_Group3_config2/src /home/andybro/Flexibility_code/AME547_Group3_config2/build /home/andybro/Flexibility_code/AME547_Group3_config2/build /home/andybro/Flexibility_code/AME547_Group3_config2/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 
